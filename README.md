@@ -1,27 +1,25 @@
 
-# 🔐 المشروع: تحديث كلمة مرور العميل
+# 🔐 Projet : Mise à jour du mot de passe client
 
-هذا المشروع هو تطبيق ويب بسيط يتيح للعميل **تحديث كلمة المرور الخاصة به** بطريقة آمنة ومن خلال واجهة سهلة الاستخدام.
+Ce projet web simple permet à un client de mettre à jour son mot de passe de manière sécurisée à travers une interface intuitive et dynamique.
 
-### 🛠️ التقنيات المستعملة
+## 🛠️ Technologies utilisées
+- **HTML** – pour la structure de la page
+- **CSS / Bootstrap** (facultatif) – pour le style
+- **JavaScript** – pour la validation côté client (code client, mot de passe, confirmation, complexité)
+- **PHP** – pour la validation et la mise à jour des données dans la base de données
+- **MySQL** – comme base de données
 
-- **HTML** – لبناء هيكل الصفحة
-- **CSS / Bootstrap (اختياري)** – لتنسيق وتصميم الواجهة
-- **JavaScript** – للتحقق من صحة البيانات في المتصفح (كود العميل، كلمة السر، التأكيد، مستوى التعقيد)
-- **PHP** – لمعالجة البيانات في الخادم والتحديث في قاعدة البيانات
-- **MySQL** – قاعدة البيانات
+## ✅ Fonctionnalités
+- Vérification du code client (doit commencer par deux lettres et finir par des chiffres)
+- Vérification que le mot de passe actuel est correct
+- Validation du nouveau mot de passe (doit être différent et avoir 8 caractères)
+- Vérification que la confirmation du mot de passe est identique
+- Affichage de la complexité du nouveau mot de passe (forte ou faible)
+- Message d'alerte selon l'état de la mise à jour
+- Annulation automatique des champs via un bouton "Annuler"
 
-### ✅ الخصائص
-
-- التحقق من **كود العميل** (يجب أن يبدأ بحرفين ثم أرقام)
-- التحقق من صحة **كلمة المرور الحالية**
-- التحقق من **كلمة المرور الجديدة** (يجب أن تكون مختلفة وتتكوّن من 8 أحرف)
-- التأكد من أن **تأكيد كلمة المرور** مطابق للكلمة الجديدة
-- عرض **مستوى تعقيد كلمة المرور الجديدة** (ضعيفة أو قوية)
-- رسائل تنبيه حسب حالة التحديث
-- زر "إلغاء" يمسح البيانات المدخلة
-
-### 🧪 مثال لهيكل جدول `client`
+## 🧪 Exemple de structure de table client
 
 ```sql
 CREATE TABLE client (
@@ -30,16 +28,14 @@ CREATE TABLE client (
 );
 ```
 
-### 📂 الملفات الرئيسية
+## 📂 Fichiers principaux
+- **index.html** : formulaire de saisie du code client et mots de passe
+- **modifier.php** : script PHP pour vérifier et mettre à jour le mot de passe
+- **script.js** : logique JavaScript de validation
 
-- `index.html` : يحتوي على النموذج لإدخال كود العميل وكلمات السر
-- `modifier.php` : ملف PHP للتحقق من صحة البيانات وتحديثها في قاعدة البيانات
-- `script.js` : يحتوي على الكود الخاص بالتحقق عبر JavaScript
-
-### ⚙️ طريقة التشغيل
-
-1. تأكد من تثبيت **PHP** و **MySQL** على جهازك.
-2. أنشئ قاعدة بيانات باسم `bd25247361`.
-3. أنشئ جدول `client` وأضف فيه بيانات للتجريب.
-4. افتح المشروع من خلال خادم محلي (XAMPP أو WAMP).
-5. افتح الصفحة الرئيسية وجرب تحديث كلمة السر.
+## ⚙️ Comment utiliser
+1. Assurez-vous d’avoir **PHP** et **MySQL** installés localement.
+2. Créez une base de données nommée `bd25247361`.
+3. Créez la table client et insérez quelques données test.
+4. Lancez le projet via un serveur local (XAMPP, WAMP, etc.).
+5. Accédez à la page HTML et testez la mise à jour.
