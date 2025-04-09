@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modifier</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Mise a jour du mot de passe</legend>
+        <form action="modifier.php" method="post">
+            <div class="groupe">
+                <label for="code">Code client</label>
+                <input type="text" name="code" id="code">
+            </div>
+            <br>
+            <div class="groupe">
+                <label for="mdp">Mot de passe actuel</label>
+                <input type="text" name="mdp" id="mdp">
+            </div>
+            <br>
+            <div class="groupe">
+                <label for="nmdp">Nouveau mot de passe</label>
+                <input type="text" name="nmdp"  id="nmdp" onkeyup="complexite()">
+            </div>
+            <span id="span"></span>
+            <br>
+            <div class="groupe">
+                <label for="cmdp">Confirmation du mot de passe</label>
+                <input type="text" name="cmdp" id="cmdp">
+            </div>
+            <br>
+            <div class="botton">
+                <input type="button" value="Annuler" id="bt1" onclick="annul()">
+                <input type="button" value="Modifier" id="bt2" onclick="verif1()">
+            </div>
+        </form>
+    </fieldset>
+    <style>
+        legend{
+            color: aqua;
+            font-family: Arial, Helvetica, sans-serif;
+            text-shadow: 2px 2px blue;
+            font-weight: bold;
+        }
+        label{
+            color: black;
+            text-shadow: 2.5px 2.5px aqua;
+        }
+        .groupe{
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .groupe label{
+            width: 200px;
+        }
+        .groupe input{
+            flex: 1;
+            margin-right: 999px;
+        }
+        .botton{
+            float: right;
+            margin-right: 999px;
+        }
+        .botton #bt1{
+            color: white;
+            padding: 9px;
+            border-radius: 50px;
+            background-color: aqua;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            border: none;
+        }
+        .botton #bt1:hover{
+            background-color: #0056b3;
+        }
+
+        .botton #bt1:active{
+            background-color: #004080;
+        }
+
+        .botton #bt1:focus{
+            outline: none;
+            box-shadow: 0 0 3px #007BFF;
+        }
+
+        .botton #bt2{
+            color: white;
+            padding: 9px;
+            border-radius: 50px;
+            background-color: aqua;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            border: none;
+
+        }
+
+        .botton #bt2:hover{
+            background-color: #0056b3;
+        }
+
+        .botton #bt2:active{
+            background-color: #004080;
+        }
+
+        .botton #bt2:focus{
+            outline: none;
+            box-shadow: 0 0 3px #007BFF;
+        }
+        span {
+            position: relative;
+            left: 47%;
+            bottom: 30px;
+        }
+
+    </style>
+    <script src="controle.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>commande</title>
+</head>
+<body>
+    <form action="commander.php" method="post">
+        <div id="qte1">
+            <select name="list1" id="list1">
+                <option >Selectionner un article</option>
+                <option value="HDD193">DIsque dur externe, capacite 1To</option>
+            </select>
+
+            <label for="Qte">Qte</label>
+            <input type="button" value="-" onclick="moin(n1)">
+            <input type="text" name="n1" id="n1" size="3" value="0">
+            <input type="button" value="+" onclick="plus(n1)">
+        </div>
+        <div id="qte2">
+            <select name="list2" id="list2">
+                <option >Selectionner un article</option>
+                <option value="PIJ159">Imprimente jet d'encre, vitesse 10ppm</option>
+            </select>
+
+            <label for="Qte">Qte</label>
+            <input type="button" value="-" onclick="moin(n2)">
+            <input type="text" name="n2" id="n2" size="3" value="0">
+            <input type="button" value="+" onclick="plus(n2)">
+        </div>
+
+        <div id="inscription">
+            <label for="code">Code client :</label>
+            <input type="text" name="code" id="code">
+            <br>
+            <br>
+            <label for="">Mot de passe :</label>
+            <input type="password" name="mdp" id="mdp">
+            <br>
+            <br>
+            <input type="button" id="bt" value="Annuler" onclick="annul2()">
+            <input type="button" id="bt2" value="Commander" onclick="verif2()">
+        </div>
+    </form>
+    <style>
+        div{
+            margin-bottom: 15px;
+        }
+        #qte1 input {
+            position: relative;
+            left:29px;
+        }
+        #qte1 label {
+            position: relative;
+            left:29px;
+        }
+
+        #inscription #code {
+            position: relative;
+            left: 11px;
+        }
+    </style>
+</body>
+<script src="controle.js"></script>
+</html>
